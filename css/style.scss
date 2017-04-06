@@ -1,0 +1,1079 @@
+
+/*-------  VARIABLES -------*/
+
+$yellow: #f9b43b;
+$grey: #2f3234;
+$orange: #e35028;
+$order: #e45028;
+$hover-order: #c1401e;
+$container-width: 940px;
+
+/*------END VARIABLES -------*/
+
+
+/*----- MIXINS ----*/
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/*-----END MIXINS-----*/
+
+/*------ Common ----*/
+* {
+  box-sizing: border-box;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	font-family: 'ubuntu', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.42;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: #414141;
+  font-weight: normal;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	position: relative;
+    overflow: hidden;
+    min-width: 960px;
+    height: 100%;
+}
+
+.main {
+	height: 100%;
+	transition: 1s;
+	-webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+  @include clearfix;
+  position: relative;
+  height: 100%;
+}
+
+.content {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.title	{
+	font-family: 'gagalin';
+	font-size: 72px;
+	&_yellow {
+		color: $yellow;
+	}
+	&_grey {
+		color: $grey;
+	}
+	&_white {
+		color: #fff;
+	}
+}
+
+.btn {
+	color: #fff;
+	border-radius: 5px;
+	padding: 10px 15px;
+	font-family: 'ubuntu', sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-top: -15px;
+    vertical-align: middle;
+    border: none;
+    background: transparent;
+    &_order {
+		background-color: $orange;
+		// margin-left: 30px;
+		&:hover {
+			background-color: $hover-order;
+		}
+		&_true {
+			background-color: $orange;
+			&:hover {
+				background-color: $hover-order;
+			}
+		}
+	}
+
+	&_reviews {
+		background-color: $grey;
+		&:hover {
+			background-color: #1f2122;
+		}
+	}
+}
+
+.section {
+	height: 100%;
+	height: 100vh;
+
+	min-height: 650px;
+	background-size: cover;
+    background-position: center center;
+    position: relative;
+    // overflow: hidden;
+}
+/*------END Common ----*/
+
+
+/*-----SCREEN 1-----*/
+.one {
+	background-image: url(../img/screen-1.jpg);
+	
+}
+
+
+
+
+.top__menu {
+	@include clearfix;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	margin-top: 15px;
+	&_left {
+		float: left;
+	}
+	&_logo {
+
+	}
+	&_right {
+		float: right;
+		margin-top: 20px;
+	}
+	&__list {
+		color: #fff;
+		display: inline-block;
+		margin-right: 30px;
+		&_item {
+			float: left;
+			font-size: 13px;
+			font-weight: 500;
+			text-transform: uppercase;
+			margin-right: 30px;
+			list-style-type: disc;
+			&:first-child {
+				list-style-type: none;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&__link {
+		color: #fff;
+		text-transform: uppercase;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.first {
+	text-align: center;
+	&__img {
+		display: inline-block;
+		width: 49%;
+		vertical-align: middle;
+	}
+	&__text {
+		display: inline-block;
+		width: 49%;
+		vertical-align: middle;
+		text-align: left;
+	}
+	&__desc {
+		font-family: 'lifehack', sans-serif;
+		color: #fff;
+		font-size: 65px;
+	}
+	&__sparrow {
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		cursor: pointer;
+	}
+}
+
+/*----END SCREEN 1----*/
+
+/*---SCREEN TWO-----*/
+
+.second {
+		background-image: url(../img/screen-2.jpg);
+		color: $grey;
+		text-align: center;
+}
+
+.options {
+	&__list {
+		font-size: 0;
+		margin-top: 85px;
+		&_item {
+			list-style-type: none;
+			display: inline-block;
+			width: 33%;
+			vertical-align: top;
+			&_title {
+				font-family: 'lifehack', sans-serif;
+				font-size: 24px;
+				margin-top: 15px;
+				font-weight: 300;
+			}
+			&_text {
+				font-size: 14px;
+				font-family: 'ubuntu', sans-serif;
+				font-weight: 300;
+				line-height: 24px;
+			}
+		}
+	}
+}
+
+/*----END SCREEN TWO-----*/
+
+/*----SCREEN THREE-----*/
+
+.third {
+  background-image: -webkit-linear-gradient(to bottom, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  background-image: -o-linear-gradient(to bottom, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  background-image: linear-gradient(to bottom, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+}
+
+.burger {
+	&_slider {
+		@include clearfix;
+		&_wrap {
+			position: relative;
+		}
+		&__controls {
+
+		}
+		&__btn {
+			&_next {
+				position: absolute;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				z-index: 10;
+				right: -20px;
+				svg {
+					-webkit-transform: rotate(-90deg);
+					 transform: rotate(-90deg);
+				}
+			}
+			&_prev {
+				position: absolute;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				z-index: 10;
+				left: -20px;
+				svg {
+				  -webkit-transform: rotate(90deg);
+				  transform: rotate(90deg);
+				}
+			}
+		}
+		&__left {
+			float: left;
+			width: 470px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+		}
+		&__right {
+			float: right;
+			width: 470px;
+		}
+		&__img {
+			// position: absolute;
+		 //    top: 50%;
+		 //    -webkit-transform: translateY(50%);
+		 //    -ms-transform: translateY(50%);
+		 //    transform: translateY(50%);
+			&__picture {
+				width: 470px;
+			}
+		}
+		&__text {
+			color: #fff;
+			font-size: 14px;
+			font-family: 'ubuntu', sans-serif;
+			font-weight: 300;
+			line-height: 24px;
+		}
+		&__cost {
+			font-family: 'gagalin', sans-serif;
+			font-size: 72px;
+			color: $orange;
+			display: inline-block;
+		}
+		&__currency {
+			font-family: 'gagalin', sans-serif;
+			font-size: 30px;
+			color: $orange;
+			text-transform: uppercase;
+			display: inline-block;
+			margin-right: 30px;
+		}
+		&__composition {
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-align: center;
+			border-radius: 5px;
+			background-color: rgba(227, 80, 40, .4);
+			padding: 12px 22px;
+			transition: .5s;
+			&:hover {
+				background-color: #e35028;
+			}
+			&:hover .burger_slider__composition__table {
+				display: block;
+			}
+			&__icon {
+
+			}
+			&__text {
+				display: block;
+				color: #fff;
+				font-size: 14px;
+				font-family: 'gagalin', sans-serif;
+			}
+			&__table {
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 90px;
+				border-radius: 5px;
+  				background-color: rgba(255, 255, 255, .8);
+				width: 270px;
+				padding: 15px;
+				font-size: 14px;
+				font-family: 'ubuntu', sans-serif;
+				font-weight: 500;
+				table {
+					width: 100%;
+					text-align: justify;
+				}
+				// tr {
+				// 	width: 100%;
+				// }
+			}
+			&__kkal {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				font-family: 'gagalin', sans-serif;
+				color: #fff;
+				text-align: center;
+				opacity: .7;
+				&__count {
+					font-size: 20px;
+					position: absolute;
+				    top: 50%;
+				    left: 50%;
+				    transform: translate(-50%, -50%);
+				}
+				&__text {
+					font-size: 14px;
+					display: block;
+				}
+			}
+		}
+
+	}
+}
+
+/*----END SCREEN THREE----*/
+
+/*-----SCREEN FOURTH----*/
+
+.fourth {
+	background-image: url(../img/screen-3.jpg);
+}
+
+.team {
+	float: right;
+	width: 50%;
+	height: 100%;
+	background-color: rgba(#2f3234, .93);
+	padding: 100px 30px 50px 90px;
+	position: relative;
+	&-accordion {
+		margin-top: 50px;
+	}
+	&__item {
+		margin-bottom: 30px;
+		
+	}
+	&__trigger {
+		display: block;
+		text-decoration: none;
+		padding-left: 15px;
+		position: relative;
+		color: #fff;
+		font-family: 'gagalin', sans-serif;
+		font-size: 14px;
+		&:hover {
+			color: $yellow;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 5px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 4px 8px 4px;
+			border-color: transparent transparent #f9b33b transparent;
+			transform: rotate(0deg);
+			transition: .3s;
+	}
+	&__title {
+		// padding-left: 15px;
+		// position: relative;
+		
+		}
+		&_text {
+			
+		}
+	}
+	&__desc {
+		margin: 20px 0 0 15px;
+		font-size: 0;
+		display: none;
+		&_foto {
+			border-radius: 50%;
+		    text-align: center;
+		    overflow: hidden;
+		    background-size: cover;
+		    background-position: center center;
+		    width: 100px;
+		    height: 100px;
+		    margin-left: 10px;
+		    display: inline-block;
+		}
+		&__about {
+			color: #fff;
+			font-family: 'ubuntu', sans-serif;
+			font-size: 14px;
+			margin-left: 20px;
+			display: inline-block;
+			max-width: 70%;
+			vertical-align: top;
+			&_position {
+				font-weight: 600;
+			}
+			&_text {
+				font-weight: 300;
+				margin-top: 20px;
+			}
+		}
+
+	}
+}
+
+
+.team__item.team__item_active {
+			& .team__desc {
+				display: block;
+				transition: .5s;
+			}
+			& .team__trigger {
+				color: $yellow;
+				&:before {
+					transform: rotate(-180deg);
+					transition: .5s;
+				}
+			}
+		}
+
+
+/*----END SCREEN FOURTH----*/
+
+
+/*---SCREEN FIFTH-----*/
+
+.fifth {
+	background-image: url(../img/screen-4.jpg);
+	&_left {
+		float: left;
+		padding: 100px 0 0 100px;
+	}
+	&_right {
+		float: right;
+		color: #fff;
+		// position: relative;
+	}
+}
+
+.menu-acco {
+	position: absolute;
+	top: 0; //Топ и боттом ноль растягивают по высоте на 100%, если position: absolute
+	bottom: 0;
+	right: 0;
+	@include clearfix;
+	&__item {
+		float: left;
+		height: 100%;
+		@include clearfix;
+		transition: .5s;
+		&_active {
+			& .menu-acco__content {
+				width: 540px;
+				transition: .5s;
+			}
+			& .menu-acco__trigger_text{
+				color: $yellow;
+			}
+		}
+	}
+	&__trigger {
+		display: block;
+		width: 80px;
+		height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		position: relative;
+		float: left;
+		&_text {
+			font-family: 'gagalin', sans-serif;
+			font-size: 40px;
+			color: #fff;
+			position: absolute;
+			top: 50%;
+			height: 80px; //Высота должна быть такая же как у родительского блока
+			margin-top: -40px; //отступаем половину высоты родительского блока, для центровки
+			white-space: nowrap; //Запрет переноса строки
+			width: 650px; //при развороте станет высотой
+			left: 50%;
+			margin-left: -315px; //центрирует после поворота
+			transform: rotate(-90deg);
+			text-align: center;
+		}
+	}
+	&__content {
+		background-color: rgba(#2f3234, .93);
+		width: 0;		
+		color: #fff;
+		font-family: 'ubuntu', sans-serif;
+		font-size: 14px;
+		font-weight: 300;
+		float: left;
+		height: 100%;
+		overflow: hidden;
+	}
+	&__text {
+		width: 540px;
+		padding: 60px 30px;
+	}
+}
+
+/*----END SCREEN FIFTH-----*/
+
+/*----SCREEN SIXTH----*/
+
+.sixth {
+	&_plate {
+		float: left;
+		width: 25%;
+		height: 50%;
+		background-size: cover;
+    	background-position: center center;
+    	filter: grayscale(100%);
+		&:hover .reviews {
+			display: block;
+		}
+	}
+}
+
+.reviews {
+	display: none;
+	font-size: 14px;
+	color: #fff;
+	padding: 50px 20px;
+	background-color: rgba(0, 0, 0, .7);
+	height: 100%;
+	&__title {
+		font-family: 'gagalin', sans-serif;
+	}
+	&__text {
+		margin: 20px 0 40px 0;
+		font-family: 'ubuntu', sans-serif;
+		font-weight: 300;
+	}
+}
+
+/*-----END SCREEN SIXTH---*/
+
+/*----SCREEN SEVENTH-----*/
+
+.seventh {
+	background-image: url(../img/screen-6.jpg);
+	.title {
+		text-align: center;
+	}
+}
+
+.order {
+	@include clearfix;
+	&_left {
+		width: 50%;
+		float: left;
+		font-size: 0;
+	}
+	&_right {
+		width: 50%;
+		float: right;
+		// font-size: 0;
+	}
+	&__name {
+
+	}
+	&__label {
+		color: #fff;
+		display: inline-block;
+		font-family: 'ubuntu', sans-serif;
+		font-size: 14px;
+		font-weight: 300;
+		margin-bottom: 5px;
+    	margin-top: 10px;
+    	margin-right: 15px;
+	}
+	&__name {
+		font-size: 14px;
+		display: inline-block;
+		width: 50%;
+		padding-right: 20px;
+	}
+	&__phone {
+		display: inline-block;
+		width: 50%;
+		padding-right: 20px;
+		font-size: 14px;
+	}
+	&__street {
+		padding-right: 20px;
+	}
+	&__house {
+		display: inline-block;
+		padding-right: 20px;
+		width: 25%;
+	}
+	&__housing {
+		display: inline-block;
+		padding-right: 20px;
+		width: 25%;
+	}
+	&__apartment {
+		display: inline-block;
+		padding-right: 20px;
+		width: 25%;
+	}
+	&__floor {
+		display: inline-block;
+		padding-right: 20px;
+		width: 25%;
+	}
+	&__comment {
+		textarea {
+			width: 100%;
+			border-radius: 5px;
+			font-size: 14px;
+			padding: 8px;
+			color: $grey;
+			font-family: 'ubuntu', sans-serif;
+			font-weight: 300;
+			resize: none;
+			height: 105px;
+			outline: none;
+			&:focus {
+				border: 2px solid #f9b43b;
+			}
+		}
+		
+	}
+	&__money {
+		position: relative;
+		
+		label {
+			cursor: pointer;
+		}
+		
+	}
+	&__call {
+		position: relative;
+		label {
+			cursor: pointer;
+		}
+		
+	}
+	&_check {
+		position: absolute;
+		display:none;
+		&:checked +.order_checked {
+			background-image: url(../img/icons/check.svg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+			fill: $orange;
+			transition: .3s;
+		}
+	}
+	&_checked {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		background-color: #fff;
+		position: relative;
+	    top: 2px;
+	    margin-right: 10px;
+	}
+	&_radio-checked {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background-color: #fff;
+		margin-right: 10px;
+		position: relative;
+		top: 2px;
+	}
+	&_radio {
+		display: none;
+		&:checked + .order_radio-checked {
+			transition: .3s;
+			/* IE10+ */ 
+			background-image: -ms-radial-gradient(center, ellipse farthest-corner, #E45028 35%, #FFFFFF 35%);
+
+			/* Mozilla Firefox */ 
+			background-image: -moz-radial-gradient(center, ellipse farthest-corner, #E45028 35%, #FFFFFF 35%);
+
+			/* Opera */ 
+			background-image: -o-radial-gradient(center, ellipse farthest-corner, #E45028 35%, #FFFFFF 35%);
+
+			/* Webkit (Safari/Chrome 10) */ 
+			background-image: -webkit-gradient(radial, center center, 0, center center, 286, color-stop(35, #E45028), color-stop(35, #FFFFFF));
+
+			/* Webkit (Chrome 11+) */ 
+			background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #E45028 35%, #FFFFFF 35%);
+
+			/* W3C Markup */ 
+			background-image: radial-gradient(ellipse farthest-corner at center, #E45028 35%, #FFFFFF 35%);
+		}
+	}
+	&__submit {
+		margin-top: 20px;
+		.btn::first-child {
+			margin-left: 0;
+		}
+		button {
+			cursor: pointer;
+		}
+	}
+
+}
+label {
+	color: #fff;
+	font-family: 'ubuntu', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	// margin-bottom: 5px;
+	// margin-top: 10px;
+}
+button {
+	outline: none;
+}
+input[type= "text"] {
+	border-radius: 5px;
+	height: 35px;
+	border: 0;
+	width: 100%;
+	font-size: 14px;
+	color: $grey;
+	font-family: 'ubuntu', sans-serif;
+	font-weight: 300;
+	padding: 8px;
+	outline: none;
+	&:focus {
+		border: 2px solid #f9b43b;
+	}
+}
+
+
+/*-----END SCREEN SEVENTH-----*/
+
+
+/*-----SCREEN EIGHT-------*/
+
+.eighth {
+
+}
+
+.yandex-map {
+	height: calc(100% - 60px);
+	width: 100%;
+}
+
+.footer {
+	height: 60px;
+	background-image: url(../img/footer-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	@include clearfix;
+	&__left {
+		text-align: left;
+		float: left;
+		@include clearfix;
+	}
+	&__right {
+		float: right;
+		position: relative;
+	}
+}
+
+.address {
+	color: #fff;
+	font-family: 'ubuntu', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	display: block;
+	font-style: normal;
+	margin-top: 10px;
+}
+
+.phone {
+	display: block;
+	color: $orange;
+	text-decoration: none;
+	padding-left: 20px;
+	position: relative;
+	font-family: 'ubuntu', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	margin-top: 6px;
+	&:before {
+		content: "";
+		background-image: url(../img/icons/phone.svg);
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		left: 0;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+}
+
+.socials {
+	&-list {
+		position: relative;
+		top: 50%;
+		transform: translateY(50%);
+		&__item {
+			display: inline-block;
+		}
+	}
+	&__link {
+		width: 25px;
+		height: 25px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		margin-left: 20px;
+		opacity: .5;
+		display: block;
+		background-size: contain;
+		&:hover {
+			opacity: 1;
+		}
+		&__vk {
+		background-image: url(../img/icons/vk.svg);
+		}
+		&__fb {
+			background-image: url(../img/icons/fb.svg);
+		}
+		&__inst {
+			background-image: url(../img/icons/inst.svg);
+		}
+		&__tw {
+			background-image: url(../img/icons/twitter.svg);
+		}
+	}
+	
+}
+
+
+
+/*-----END SCREEN SEVENTH-----*/
+
+
+
+.fixed-menu {
+  position: fixed;
+  top: 90px;
+  right: 40px;
+}
+
+.fixed-menu__link {
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: relative;
+}
+
+.fixed-menu__link:after,
+.fixed-menu__link:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.fixed-menu__link:after {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+}
+
+.fixed-menu__link:before {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.fixed-menu__link:hover:before {
+  width: 14px;
+  height: 14px;
+  opacity: 1;
+}
+
+.fixed-menu__item.active .fixed-menu__link:before {
+  width: 14px;
+  height: 14px;
+  opacity: 1;
+}
+
+.fixed-menu__item {
+  margin-bottom: 5px;
+}
+
+
+
+/*----POPUP ----*/
+
+.popup {
+  display: none;
+}
+
+.full-review {
+  padding: 25px 20px;
+  position: relative;
+  width: 460px;
+}
+
+.full-review__title {
+  font-family: 'gagalin';
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.full-review__content {
+  font-size: 14px;
+  font-family: 'ubuntu';
+}
+
+.full-review__close {
+  width: 15px;
+  height: 15px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  opacity: .7;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.full-review__close:hover {
+  opacity: 1;
+}
+
+.full-review__close svg {
+  width: 100%;
+  height: 100%;
+}
+
+.status-popup__inner {
+  padding: 20px;
+  text-align: center;
+}
+
+.status-popup__message {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.status-popup {
+  width: 240px;
+}
+
+.error-message {
+  color: #e35028;
+}
+
+.fancybox-close-small{
+	display: none;
+}
+/*----END POPUP----*/
