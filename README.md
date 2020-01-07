@@ -1,3 +1,4 @@
 # burgers
 Landing page
-Test commit
+
+Лендинг бургерной. Реализована прокрутка экранами.
